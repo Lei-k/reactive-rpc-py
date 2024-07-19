@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "reactive-rpc"
+version = "0.1.0"
+description = ""
+authors = ["Neil Lei <qwe17235@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+reactivex = "^4.0.4"
+
+
+[tool.poetry.group.dev.dependencies]
+gevent = "^24.2.1"
+gevent-websocket = "^0.10.1"
+eventlet = "^0.36.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = [
+    "src",
+]
+
+[virtualenvs]
+in-project = true
